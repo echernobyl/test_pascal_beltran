@@ -4,6 +4,7 @@ var number : integer;
 procedure num_a_letra(number_local : Integer);
 begin
      case(number_local) of
+     0: halt(0);
      1: writeln('uno');
      2: writeln('dos');
      3: writeln('tres');
@@ -18,14 +19,13 @@ begin
 end;
 
 begin
-     writeln('Ingrese un numero del 1 al 10');
      writeln('Ingrese 0 (cero) para salir del programa');
      repeat
+     writeln('Ingrese un numero del 0 al 10');
            readln(number);
-           if (number=0) then
-              halt(0);
-     until (number>=1) and (number<=10);
+     until (number>=0) and (number<=10);
      num_a_letra(number);
+     readln();
 end.
 
 
